@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    tools:context=".MainActivity">
+
+
+    <TextView
+        android:id="@+id/Speed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="SPEED CALCULATOR"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="1000:625"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/speed_meter" />
+
+    <TextView
+        android:id="@+id/showspeed"
+        android:layout_width="217dp"
+        android:layout_height="35dp"
+        android:background="#FFFFFF"
+        app:layout_constraintBottom_toTopOf="@+id/imageView"
+        app:layout_constraintEnd_toEndOf="@+id/km_text"
+        app:layout_constraintHorizontal_bias="0.546"
+        app:layout_constraintStart_toStartOf="@+id/km_text"
+        app:layout_constraintTop_toBottomOf="@+id/clear_button"
+        app:layout_constraintVertical_bias="0.68" />
+
+    <EditText
+        android:id="@+id/second_text"
+        android:layout_width="210dp"
+        android:layout_height="33dp"
+        android:layout_marginTop="12dp"
+        android:background="#CDCBCB"
+        android:ems="10"
+        android:hint="@string/enter_time_second"
+        android:inputType="number"
+        app:layout_constraintBottom_toTopOf="@+id/cal_button"
+        app:layout_constraintEnd_toEndOf="@+id/meter_text"
+        app:layout_constraintStart_toStartOf="@+id/meter_text"
+        app:layout_constraintTop_toBottomOf="@+id/meter_text" />
+
+    <EditText
+        android:id="@+id/meter_text"
+        android:layout_width="210dp"
+        android:layout_height="33dp"
+        android:layout_marginBottom="4dp"
+        android:background="#CDCBCB"
+        android:ems="10"
+        android:hint="@string/enter_distance_meter"
+        android:inputType="number"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toTopOf="@+id/second_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.459"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Speed" />
+
+    <Button
+        android:id="@+id/cal_button"
+        android:layout_width="91dp"
+        android:layout_height="47dp"
+        android:text="@string/calculate"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/clear_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/clear_button"
+        app:layout_constraintTop_toTopOf="@+id/clear_button"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/clear_button"
+        android:layout_width="78dp"
+        android:layout_height="47dp"
+        android:layout_marginBottom="176dp"
+        android:text="@string/clear"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/imageView"
+        app:layout_constraintEnd_toStartOf="@+id/cal_button"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/second_text"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/km_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/average_speed_km_h"
+        android:textColor="#FF0000"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/showspeed"
+        app:layout_constraintEnd_toEndOf="@+id/cal_button"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="@+id/clear_button" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
